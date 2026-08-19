@@ -1,0 +1,22 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+
+# Java
+target/
+build/
+*.class
+
+# Node / Angular
+node_modules/
+dist/
+
+# Environment
+.env
+
+# Logs
+*.log
