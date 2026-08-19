@@ -8,10 +8,11 @@
 </head>
 <body>
 
-<header>
-    <nav>
-        <h1>CimeBook</h1>
-        <ul>
+<header class="site-header">
+    <nav class="navbar">
+        <h1 class="logo">CimeBook</h1>
+
+        <ul class="nav-links">
             <li><a href="#">Activities</a></li>
             <li><a href="#">Guides</a></li>
             <li><a href="#">Login</a></li>
@@ -21,35 +22,95 @@
 
 <main>
     <section class="hero">
-        <h2>Book mountain activities around Annecy</h2>
-        <p>Discover hiking, climbing, skiing and canyoning experiences with local guides.</p>
-        <a href="#" class="button">Explore activities</a>
+        <div class="hero-content">
+            <p class="hero-label">Mountain activities around Annecy</p>
+
+            <h2>Book unforgettable outdoor experiences with local guides</h2>
+
+            <p class="hero-description">
+                Discover hiking, climbing, skiing and canyoning activities near Annecy,
+                guided by trusted local mountain professionals.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#" class="button button-primary">Explore activities</a>
+                <a href="#" class="button button-secondary">Become a guide</a>
+            </div>
+        </div>
     </section>
 
-    <section class="activities">
-        <h2>Popular Activities</h2>
-
-        <div class="activity-card">
-            <h3>Hiking at Semnoz</h3>
-            <p>Beginner-friendly hiking experience with a local guide.</p>
-            <p><strong>From 45€</strong></p>
+    <section class="activities-section">
+        <div class="section-header">
+            <p class="section-label">Popular activities</p>
+            <h2>Explore outdoor experiences near Annecy</h2>
+            <p>
+                Discover beginner-friendly and adventurous mountain activities
+                guided by local professionals.
+            </p>
         </div>
 
-        <div class="activity-card">
-            <h3>Climbing in Talloires</h3>
-            <p>Discover climbing routes near Lake Annecy.</p>
-            <p><strong>From 60€</strong></p>
-        </div>
+        <div class="activities-grid">
+            <article class="activity-card">
+                <div class="activity-image activity-image-hiking"></div>
 
-        <div class="activity-card">
-            <h3>Canyoning near Angon</h3>
-            <p>A refreshing adventure for intermediate participants.</p>
-            <p><strong>From 75€</strong></p>
+                <div class="activity-content">
+                    <p class="activity-category">Hiking</p>
+                    <h3>Hiking at Semnoz</h3>
+                    <p>
+                        A beginner-friendly hike with panoramic views over Lake Annecy
+                        and the surrounding mountains.
+                    </p>
+
+                    <div class="activity-meta">
+                        <span>Beginner</span>
+                        <span>4h</span>
+                        <span>From 45€</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="activity-card">
+                <div class="activity-image activity-image-climbing"></div>
+
+                <div class="activity-content">
+                    <p class="activity-category">Climbing</p>
+                    <h3>Climbing in Talloires</h3>
+                    <p>
+                        Discover climbing routes near Lake Annecy with a certified
+                        local guide.
+                    </p>
+
+                    <div class="activity-meta">
+                        <span>Intermediate</span>
+                        <span>3h</span>
+                        <span>From 60€</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="activity-card">
+                <div class="activity-image activity-image-canyoning"></div>
+
+                <div class="activity-content">
+                    <p class="activity-category">Canyoning</p>
+                    <h3>Canyoning near Angon</h3>
+                    <p>
+                        A refreshing canyoning experience for people looking for a more
+                        dynamic outdoor adventure.
+                    </p>
+
+                    <div class="activity-meta">
+                        <span>Intermediate</span>
+                        <span>Half-day</span>
+                        <span>From 75€</span>
+                    </div>
+                </div>
+            </article>
         </div>
     </section>
 </main>
 
-<footer>
+<footer class="site-footer">
     <p>&copy; 2026 CimeBook - Project by Afsaneh Gheisariyeh</p>
 </footer>
 
