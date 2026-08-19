@@ -9,84 +9,244 @@ body {
     background-color: #f5f7f6;
 }
 
-header {
+.site-header {
     background-color: #163832;
     color: white;
     padding: 1rem;
 }
 
-nav {
+.navbar {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-nav h1 {
+.logo {
     margin: 0;
+    font-size: 1.5rem;
 }
 
-nav ul {
+.nav-links {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     padding: 0;
     margin: 0;
 }
 
-nav a {
+.nav-links a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
 }
 
 .hero {
-    padding: 3rem 1rem;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1.5rem;
     text-align: center;
-    background-color: #dceee9;
+    background: linear-gradient(135deg, #dceee9, #f5f7f6);
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-label {
+    margin-bottom: 1rem;
+    color: #226f54;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.85rem;
 }
 
 .hero h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    margin: 0;
+    font-size: 2.2rem;
+    line-height: 1.2;
+    color: #163832;
+}
+
+.hero-description {
+    max-width: 620px;
+    margin: 1.2rem auto 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #415a57;
+}
+
+.hero-actions {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
 }
 
 .button {
     display: inline-block;
-    margin-top: 1rem;
-    padding: 0.8rem 1.2rem;
-    background-color: #226f54;
-    color: white;
+    padding: 0.85rem 1.3rem;
+    border-radius: 8px;
     text-decoration: none;
-    border-radius: 6px;
+    font-weight: bold;
 }
 
-.activities {
-    padding: 2rem 1rem;
+.button-primary {
+    background-color: #226f54;
+    color: white;
+}
+
+.button-secondary {
+    background-color: white;
+    color: #226f54;
+    border: 1px solid #226f54;
+}
+
+.activities-section {
+    padding: 4rem 1.5rem;
+    background-color: #f5f7f6;
+}
+
+.section-header {
+    max-width: 720px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+}
+
+.section-label {
+    margin-bottom: 0.75rem;
+    color: #226f54;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.85rem;
+}
+
+.section-header h2 {
+    margin: 0;
+    color: #163832;
+    font-size: 2rem;
+}
+
+.section-header p {
+    margin-top: 1rem;
+    color: #415a57;
+    line-height: 1.6;
+}
+
+.activities-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.5rem;
 }
 
 .activity-card {
-    background: white;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 8px;
-    border: 1px solid #ddd;
+    overflow: hidden;
+    background-color: white;
+    border: 1px solid #d9e2df;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(22, 56, 50, 0.08);
 }
 
-footer {
+.activity-image {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+}
+
+.activity-image-hiking {
+    background: linear-gradient(135deg, #7fb069, #dceee9);
+}
+
+.activity-image-climbing {
+    background: linear-gradient(135deg, #8d99ae, #edf2f4);
+}
+
+.activity-image-canyoning {
+    background: linear-gradient(135deg, #2a9d8f, #dceee9);
+}
+
+.activity-content {
+    padding: 1.25rem;
+}
+
+.activity-category {
+    margin: 0 0 0.5rem;
+    color: #226f54;
+    font-weight: bold;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.activity-content h3 {
+    margin: 0;
+    color: #163832;
+}
+
+.activity-content p {
+    color: #415a57;
+    line-height: 1.6;
+}
+
+.activity-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.activity-meta span {
+    padding: 0.35rem 0.65rem;
+    background-color: #eef5f2;
+    color: #226f54;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.site-footer {
     text-align: center;
     padding: 1rem;
     background-color: #163832;
     color: white;
 }
 
+.site-footer p {
+    margin: 0;
+}
+
 @media (min-width: 768px) {
-    nav {
+    .navbar {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
 
-    .activities {
-        max-width: 1000px;
-        margin: 0 auto;
+    .hero h2 {
+        font-size: 3.2rem;
+    }
+
+    .hero-actions {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .activities-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .section-header h2 {
+        font-size: 2.4rem;
     }
 }
