@@ -259,6 +259,83 @@ body {
     line-height: 1.6;
 }
 
+.guides-section {
+    padding: 4rem 1.5rem;
+    background-color: #f5f7f6;
+}
+
+.guides-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.guide-card {
+    padding: 1.75rem;
+    background-color: white;
+    border: 1px solid #d9e2df;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(22, 56, 50, 0.08);
+}
+
+.guide-avatar {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    border-radius: 50%;
+    background-color: #226f54;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.guide-content h3 {
+    margin: 0;
+    color: #163832;
+    font-size: 1.3rem;
+}
+
+.guide-specialty {
+    margin: 0.4rem 0 0;
+    color: #226f54;
+    font-weight: bold;
+}
+
+.guide-content > p:not(.guide-specialty) {
+    color: #415a57;
+    line-height: 1.6;
+}
+
+.guide-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0 1.25rem;
+}
+
+.guide-meta span {
+    padding: 0.35rem 0.65rem;
+    background-color: #eef5f2;
+    color: #226f54;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.guide-link {
+    color: #226f54;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.guide-link:hover {
+    text-decoration: underline;
+}
+
 .site-footer {
     text-align: center;
     padding: 1rem;
@@ -295,6 +372,9 @@ body {
     }
 
     .steps-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .guides-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
