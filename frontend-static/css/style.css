@@ -166,15 +166,15 @@ body {
 }
 
 .activity-image-hiking {
-    background: linear-gradient(135deg, #7fb069, #dceee9);
+    background-image: url("../images/activities/hiking-semnoz.png");
 }
 
 .activity-image-climbing {
-    background: linear-gradient(135deg, #8d99ae, #edf2f4);
+    background-image: url("../images/activities/climbing-talloires.png");
 }
 
 .activity-image-canyoning {
-    background: linear-gradient(135deg, #2a9d8f, #dceee9);
+    background-image: url("../images/activities/canyoning-angon.png");
 }
 
 .activity-content {
