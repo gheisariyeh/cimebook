@@ -4,6 +4,7 @@ Thumbs.db
 
 # IDE
 .idea/
+*.iml
 .vscode/
 
 # Java
@@ -20,3 +21,4 @@ dist/
 
 # Logs
 *.log
+
