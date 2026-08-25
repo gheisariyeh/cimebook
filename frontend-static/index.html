@@ -6,6 +6,7 @@
     <title>CimeBook - Mountain Activities Around Annecy</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 <header class="site-header">
@@ -21,6 +22,8 @@
 </header>
 
 <main>
+
+    <!-- Hero -->
     <section class="hero">
         <div class="hero-content">
             <p class="hero-label">Mountain activities around Annecy</p>
@@ -39,79 +42,32 @@
         </div>
     </section>
 
+
+    <!-- Popular Activities -->
     <section class="activities-section">
         <div class="section-header">
             <p class="section-label">Popular activities</p>
+
             <h2>Explore outdoor experiences near Annecy</h2>
+
             <p>
                 Discover beginner-friendly and adventurous mountain activities
                 guided by local professionals.
             </p>
         </div>
 
-        <div class="activities-grid">
-            <article class="activity-card">
-                <div class="activity-image activity-image-hiking"></div>
-
-                <div class="activity-content">
-                    <p class="activity-category">Hiking</p>
-                    <h3>Hiking at Semnoz</h3>
-                    <p>
-                        A beginner-friendly hike with panoramic views over Lake Annecy
-                        and the surrounding mountains.
-                    </p>
-
-                    <div class="activity-meta">
-                        <span>Beginner</span>
-                        <span>4h</span>
-                        <span>From 45€</span>
-                    </div>
-                </div>
-            </article>
-
-            <article class="activity-card">
-                <div class="activity-image activity-image-climbing"></div>
-
-                <div class="activity-content">
-                    <p class="activity-category">Climbing</p>
-                    <h3>Climbing in Talloires</h3>
-                    <p>
-                        Discover climbing routes near Lake Annecy with a certified
-                        local guide.
-                    </p>
-
-                    <div class="activity-meta">
-                        <span>Intermediate</span>
-                        <span>3h</span>
-                        <span>From 60€</span>
-                    </div>
-                </div>
-            </article>
-
-            <article class="activity-card">
-                <div class="activity-image activity-image-canyoning"></div>
-
-                <div class="activity-content">
-                    <p class="activity-category">Canyoning</p>
-                    <h3>Canyoning near Angon</h3>
-                    <p>
-                        A refreshing canyoning experience for people looking for a more
-                        dynamic outdoor adventure.
-                    </p>
-
-                    <div class="activity-meta">
-                        <span>Intermediate</span>
-                        <span>Half-day</span>
-                        <span>From 75€</span>
-                    </div>
-                </div>
-            </article>
-        </div>
+        <!-- Activity cards are generated dynamically with JavaScript -->
+        <div class="activities-grid" id="activities-grid"></div>
     </section>
+
+
+    <!-- How It Works -->
     <section class="how-it-works-section">
         <div class="section-header">
             <p class="section-label">How it works</p>
+
             <h2>Book your mountain activity in three simple steps</h2>
+
             <p>
                 CimeBook makes it easy to discover, compare and book outdoor activities
                 with trusted local guides around Annecy.
@@ -121,7 +77,9 @@
         <div class="steps-grid">
             <article class="step-card">
                 <div class="step-number">1</div>
+
                 <h3>Choose an activity</h3>
+
                 <p>
                     Browse hiking, climbing, canyoning and skiing experiences based on
                     your level, budget and preferred location.
@@ -130,7 +88,9 @@
 
             <article class="step-card">
                 <div class="step-number">2</div>
+
                 <h3>Select a local guide</h3>
+
                 <p>
                     Check guide profiles, experience, activity details and availability
                     before making your choice.
@@ -139,7 +99,9 @@
 
             <article class="step-card">
                 <div class="step-number">3</div>
+
                 <h3>Book online</h3>
+
                 <p>
                     Send your booking request and keep track of your upcoming outdoor
                     experiences from your personal space.
@@ -147,10 +109,17 @@
             </article>
         </div>
     </section>
+
+
+    <!-- Guides -->
     <section class="guides-section" aria-labelledby="guides-title">
         <div class="section-header">
             <p class="section-label">Meet local guides</p>
-            <h2 id="guides-title">Explore with experienced local professionals</h2>
+
+            <h2 id="guides-title">
+                Explore with experienced local professionals
+            </h2>
+
             <p>
                 Discover outdoor experiences with passionate guides who know
                 the Annecy mountains and lake.
@@ -158,12 +127,16 @@
         </div>
 
         <div class="guides-grid">
+
             <article class="guide-card">
                 <div class="guide-avatar">CM</div>
 
                 <div class="guide-content">
                     <h3>Claire Martin</h3>
-                    <p class="guide-specialty">Hiking & Trail</p>
+
+                    <p class="guide-specialty">
+                        Hiking & Trail
+                    </p>
 
                     <p>
                         Mountain guide passionate about sharing the best trails
@@ -175,16 +148,22 @@
                         <span>English</span>
                     </div>
 
-                    <a href="#" class="guide-link">View profile</a>
+                    <a href="#" class="guide-link">
+                        View profile
+                    </a>
                 </div>
             </article>
+
 
             <article class="guide-card">
                 <div class="guide-avatar">JM</div>
 
                 <div class="guide-content">
                     <h3>Julien Morel</h3>
-                    <p class="guide-specialty">Climbing & Canyoning</p>
+
+                    <p class="guide-specialty">
+                        Climbing & Canyoning
+                    </p>
 
                     <p>
                         Outdoor instructor helping beginners and experienced
@@ -196,16 +175,22 @@
                         <span>English</span>
                     </div>
 
-                    <a href="#" class="guide-link">View profile</a>
+                    <a href="#" class="guide-link">
+                        View profile
+                    </a>
                 </div>
             </article>
+
 
             <article class="guide-card">
                 <div class="guide-avatar">SB</div>
 
                 <div class="guide-content">
                     <h3>Sophie Bernard</h3>
-                    <p class="guide-specialty">Kayak & Paddle</p>
+
+                    <p class="guide-specialty">
+                        Kayak & Paddle
+                    </p>
 
                     <p>
                         Lake sports instructor offering relaxed and accessible
@@ -217,17 +202,26 @@
                         <span>English</span>
                     </div>
 
-                    <a href="#" class="guide-link">View profile</a>
+                    <a href="#" class="guide-link">
+                        View profile
+                    </a>
                 </div>
             </article>
+
         </div>
     </section>
+
 </main>
 
+
+<!-- Footer -->
 <footer class="site-footer">
+
     <div class="footer-content">
+
         <div class="footer-brand">
             <h2>CimeBook</h2>
+
             <p>
                 Discover and book outdoor experiences with local guides
                 around Annecy.
@@ -236,6 +230,7 @@
 
         <div class="footer-links">
             <h3>Explore</h3>
+
             <a href="#">Activities</a>
             <a href="#">Guides</a>
             <a href="#">How it works</a>
@@ -243,19 +238,28 @@
 
         <div class="footer-links">
             <h3>Project</h3>
-            <a href="https://github.com/gheisariyeh/cimebook"
-               target="_blank"
-               rel="noopener noreferrer">
+
+            <a
+                    href="https://github.com/gheisariyeh/cimebook"
+                    target="_blank"
+                    rel="noopener noreferrer"
+            >
                 GitHub
             </a>
         </div>
+
     </div>
 
     <div class="footer-bottom">
-        <p>© 2026 CimeBook — Portfolio project by Afsaneh Gheisariyeh</p>
+        <p>
+            © 2026 CimeBook — Portfolio project by Afsaneh Gheisariyeh
+        </p>
     </div>
+
 </footer>
 
+
 <script src="js/main.js"></script>
+
 </body>
 </html>
