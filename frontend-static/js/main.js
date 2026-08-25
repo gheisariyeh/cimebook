@@ -33,42 +33,79 @@ const activities = [
 
 
 const activitiesGrid = document.querySelector("#activities-grid");
+const filterButtons = document.querySelectorAll(".filter-button");
 
 
-activities.forEach((activity) => {
+function renderActivities(activityList) {
+    activitiesGrid.innerHTML = "";
+    activitiesGrid.classList.toggle(
+        "single-result",
+        activityList.length === 1
+    );
 
-    const activityCard = document.createElement("article");
+    activityList.forEach((activity) => {
+        const activityCard = document.createElement("article");
 
-    activityCard.classList.add("activity-card");
+        activityCard.classList.add("activity-card");
 
-    activityCard.innerHTML = `
-        <div
-            class="activity-image"
-            style="background-image: url('${activity.image}')">
-        </div>
-
-        <div class="activity-content">
-
-            <p class="activity-category">
-                ${activity.category}
-            </p>
-
-            <h3>
-                ${activity.title}
-            </h3>
-
-            <p>
-                ${activity.description}
-            </p>
-
-            <div class="activity-meta">
-                <span>${activity.difficulty}</span>
-                <span>${activity.duration}</span>
-                <span>From ${activity.price}€</span>
+        activityCard.innerHTML = `
+            <div
+                class="activity-image"
+                style="background-image: url('${activity.image}')">
             </div>
 
-        </div>
-    `;
+            <div class="activity-content">
 
-    activitiesGrid.appendChild(activityCard);
+                <p class="activity-category">
+                    ${activity.category}
+                </p>
+
+                <h3>
+                    ${activity.title}
+                </h3>
+
+                <p>
+                    ${activity.description}
+                </p>
+
+                <div class="activity-meta">
+                    <span>${activity.difficulty}</span>
+                    <span>${activity.duration}</span>
+                    <span>From ${activity.price}€</span>
+                </div>
+
+            </div>
+        `;
+
+        activitiesGrid.appendChild(activityCard);
+    });
+}
+
+
+filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        const selectedCategory = button.dataset.category;
+
+        filterButtons.forEach((filterButton) => {
+            filterButton.classList.remove("active");
+            filterButton.setAttribute("aria-pressed", "false");
+        });
+
+        button.classList.add("active");
+        button.setAttribute("aria-pressed", "true");
+
+        if (selectedCategory === "All") {
+            renderActivities(activities);
+            return;
+        }
+
+        const filteredActivities = activities.filter(
+            (activity) => activity.category === selectedCategory
+        );
+
+        renderActivities(filteredActivities);
+    });
 });
+
+
+renderActivities(activities);
