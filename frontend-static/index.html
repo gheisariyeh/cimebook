@@ -56,7 +56,44 @@
             </p>
         </div>
 
-        <!-- Activity cards are generated dynamically with JavaScript -->
+        <div class="activity-filters" aria-label="Filter activities by category">
+            <button
+                    type="button"
+                    class="filter-button active"
+                    data-category="All"
+                    aria-pressed="true"
+            >
+                All
+            </button>
+
+            <button
+                    type="button"
+                    class="filter-button"
+                    data-category="Hiking"
+                    aria-pressed="false"
+            >
+                Hiking
+            </button>
+
+            <button
+                    type="button"
+                    class="filter-button"
+                    data-category="Climbing"
+                    aria-pressed="false"
+            >
+                Climbing
+            </button>
+
+            <button
+                    type="button"
+                    class="filter-button"
+                    data-category="Canyoning"
+                    aria-pressed="false"
+            >
+                Canyoning
+            </button>
+        </div>
+
         <div class="activities-grid" id="activities-grid"></div>
     </section>
 
