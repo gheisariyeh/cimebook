@@ -56,6 +56,20 @@
             </p>
         </div>
 
+        <div class="activity-search">
+            <label for="activity-search-input" class="search-label">
+                Search activities
+            </label>
+
+            <input
+                    type="search"
+                    id="activity-search-input"
+                    class="search-input"
+                    placeholder="Search hiking, climbing, canyoning..."
+                    autocomplete="off"
+            >
+        </div>
+
         <div class="activity-filters" aria-label="Filter activities by category">
             <button
                     type="button"
@@ -95,6 +109,10 @@
         </div>
 
         <div class="activities-grid" id="activities-grid"></div>
+
+        <p class="no-activities-message" id="no-activities-message" hidden>
+            No activities match your search.
+        </p>
     </section>
 
 
