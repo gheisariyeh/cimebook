@@ -37,3 +37,16 @@ The first complete version of CimeBook should include only the essential feature
 - Advanced map
 - Mobile app
 - Complex AI system
+
+## Current Development Increment
+
+The full MVP described above remains the product target.
+
+The current development increment focuses on activity persistence,
+read-only API endpoints, and integration with the existing frontend.
+
+Authentication, guide management, and bookings will be implemented
+in later increments.
+
+See [Activity API Increment](activity-api-scope.md)
+for the current scope.

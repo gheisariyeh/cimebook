@@ -23,9 +23,38 @@ Mountain guides can manage their profiles, activities and availability.
 - Docker and Deployment
 - AI-assisted features
 
-## Current Version
+## Current Status
 
-v0.0 - Project setup
+The current implementation is a responsive homepage built with
+HTML, CSS, and JavaScript.
+
+Implemented features:
+
+- Homepage sections for activities, guides, and how the platform works
+- Activity cards generated from a JavaScript array
+- Category filtering
+- Case-insensitive search by activity title and category
+- Combined search and category filtering
+- A message when no activities match the selected filters
+
+Activity data is currently hard-coded in the frontend.
+The backend, database, authentication, and booking features
+are not implemented yet.
+
+## Next Increment
+
+Create a Spring Boot activity API with H2 persistence and connect
+the existing frontend to it.
+
+See [Activity API Increment](docs/activity-api-scope.md)
+for the planned scope and acceptance criteria.
+
+## Documentation
+
+- [Project idea](docs/project-idea.md)
+- [Full MVP](docs/mvp.md)
+- [Roadmap](docs/roadmap.md)
+- [Activity API increment](docs/activity-api-scope.md)
 
 ## Author
 

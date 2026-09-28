@@ -1,5 +1,30 @@
 # CimeBook Roadmap
 
+## Current Progress
+
+The responsive homepage, dynamic activity cards, category filters,
+and text search are implemented.
+
+Separate activity detail pages, guide profile pages, and booking
+forms are not implemented yet.
+
+## Immediate Priority: Activity API Increment
+
+Before continuing with the broader roadmap below, build a first
+backend integration for activity browsing:
+
+1. Define the activity API scope.
+2. Set up a Spring Boot application.
+3. Add the activity model and H2 persistence.
+4. Implement and test activity read endpoints.
+5. Connect the existing JavaScript frontend to the API.
+
+See [Activity API Increment](activity-api-scope.md)
+for the detailed scope.
+
+The version sections below describe the broader project direction.
+Their order and grouping may be revised as the project progresses.
+
 ## v0.1 - Static Homepage
 
 Create a simple responsive homepage with HTML and CSS.
