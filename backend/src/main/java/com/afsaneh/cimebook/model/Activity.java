@@ -112,4 +112,22 @@ public class Activity {
     public String getImage() {
         return image;
     }
+
+    public void updateDetails(
+            String title,
+            String description,
+            ActivityCategory category,
+            ActivityDifficulty difficulty,
+            String duration,
+            BigDecimal price,
+            String image
+    ) {
+        this.title = title;
+        this.description = description;
+        this.category = category;
+        this.difficulty = difficulty;
+        this.duration = duration;
+        this.price = price;
+        this.image = image;
+    }
 }

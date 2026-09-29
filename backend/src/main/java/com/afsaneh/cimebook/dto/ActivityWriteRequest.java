@@ -10,7 +10,7 @@ import jakarta.validation.constraints.Size;
 
 import java.math.BigDecimal;
 
-public record ActivityCreateRequest(
+public record ActivityWriteRequest(
         @NotBlank
         @Size(max = 150)
         String title,

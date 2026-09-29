@@ -1,16 +1,11 @@
 package com.afsaneh.cimebook.controller;
 
 import com.afsaneh.cimebook.dto.ActivityResponse;
+import com.afsaneh.cimebook.dto.ActivityWriteRequest;
 import com.afsaneh.cimebook.service.ActivityService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import com.afsaneh.cimebook.dto.ActivityCreateRequest;
+import org.springframework.web.bind.annotation.*;
 import jakarta.validation.Valid;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.net.URI;
 
@@ -42,12 +37,22 @@ public class ActivityController {
 
     @PostMapping
     public ResponseEntity<ActivityResponse> createActivity(
-            @Valid @RequestBody ActivityCreateRequest request
+            @Valid @RequestBody ActivityWriteRequest request
     ) {
         ActivityResponse created = activityService.create(request);
 
         URI location = URI.create("/activities/" + created.id());
 
         return ResponseEntity.created(location).body(created);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<ActivityResponse> updateActivity(
+            @PathVariable Long id,
+            @Valid @RequestBody ActivityWriteRequest request
+    ) {
+        return activityService.update(id, request)
+                .map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
     }
 }
