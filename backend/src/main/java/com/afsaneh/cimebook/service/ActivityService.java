@@ -16,4 +16,6 @@ public interface ActivityService {
     ActivityResponse create(ActivityWriteRequest request);
 
     Optional<ActivityResponse> update(Long id, ActivityWriteRequest request);
+
+    boolean delete(Long id);
 }

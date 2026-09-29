@@ -4,6 +4,7 @@ import com.afsaneh.cimebook.dto.ActivityResponse;
 import com.afsaneh.cimebook.dto.ActivityWriteRequest;
 import com.afsaneh.cimebook.model.Activity;
 import com.afsaneh.cimebook.repository.ActivityRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -98,5 +99,18 @@ public class ActivityServiceImpl implements ActivityService {
                     Activity savedActivity = activityRepository.save(activity);
                     return toResponse(savedActivity);
                 });
+    }
+
+    @Override
+    @Transactional
+    public boolean delete(Long id) {
+        Optional<Activity> activity = activityRepository.findById(id);
+
+        if (activity.isEmpty()) {
+            return false;
+        }
+
+        activityRepository.delete(activity.get());
+        return true;
     }
 }

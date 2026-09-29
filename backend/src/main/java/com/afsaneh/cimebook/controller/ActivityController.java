@@ -55,4 +55,16 @@ public class ActivityController {
                 .map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<ActivityResponse> deleteActivity(
+            @PathVariable Long id
+    ){
+        boolean deleted = activityService.delete(id);
+        if(!deleted){
+            return ResponseEntity.notFound().build();
+        }
+
+        return ResponseEntity.noContent().build();
+    }
 }
