@@ -3,21 +3,23 @@
 ## Current Progress
 
 The responsive homepage, dynamic activity cards, category filters,
-and text search are implemented.
+and text search are implemented. Activity data now comes from a
+Spring Boot read-only API backed by file-based H2.
 
 Separate activity detail pages, guide profile pages, and booking
 forms are not implemented yet.
 
-## Immediate Priority: Activity API Increment
+## First Backend Increment: Activity API
 
-Before continuing with the broader roadmap below, build a first
-backend integration for activity browsing:
+The first backend integration for activity browsing covers:
 
-1. Define the activity API scope.
-2. Set up a Spring Boot application.
-3. Add the activity model and H2 persistence.
-4. Implement and test activity read endpoints.
-5. Connect the existing JavaScript frontend to the API.
+1. Define the activity API scope. (Documented)
+2. Set up a Spring Boot application. (Implemented)
+3. Add the activity model and H2 persistence. (Implemented)
+4. Implement and check activity read endpoints. (Manually checked)
+5. Connect the existing JavaScript frontend to the API. (Manually checked)
+
+Documentation review and merge remain to close the documentation issue.
 
 See [Activity API Increment](activity-api-scope.md)
 for the detailed scope.

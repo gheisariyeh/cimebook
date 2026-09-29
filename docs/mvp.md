@@ -42,7 +42,7 @@ The first complete version of CimeBook should include only the essential feature
 
 The full MVP described above remains the product target.
 
-The current development increment focuses on activity persistence,
+The first activity increment implements activity persistence,
 read-only API endpoints, and integration with the existing frontend.
 
 Authentication, guide management, and bookings will be implemented

@@ -45,8 +45,8 @@ Titles are not required to be unique.
 | INTERMEDIATE | Intermediate |
 | ADVANCED | Advanced |
 
-The response mapping will convert enum values to the labels above
-to preserve compatibility with the current frontend.
+The response mapping converts enum values to the labels above
+to preserve compatibility with the frontend.
 
 ## Persistence Direction
 
@@ -55,8 +55,7 @@ A separate response DTO will define the public API representation.
 
 Enums will be stored by name rather than by numeric position.
 
-Database mapping and constraint enforcement will be implemented
-in the persistence step.
+The activity entity and its persistence mapping have been implemented.
 
 ## Existing Examples
 
