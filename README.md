@@ -25,33 +25,38 @@ Mountain guides can manage their profiles, activities and availability.
 
 ## Current Status
 
-The current implementation is a responsive homepage backed by a
-Spring Boot read-only activity API and file-based H2 persistence.
+The current implementation is a responsive homepage backed by a Spring Boot
+activity API and file-based H2 persistence.
 
 Implemented features:
 
 - Homepage sections for activities, guides, and how the platform works
 - Activity cards generated from API data using JavaScript
-- Category filtering
-- Case-insensitive search by activity title and category
-- Combined search and category filtering
-- A message when no activities match the selected filters
+- Category filtering and case-insensitive search in the browser
+- Loading, error, and empty-result messages for the activity list
+- Three initial activities stored in H2 without duplication on restart
+- `GET /activities` to list activities
+- `GET /activities/{id}` to retrieve one activity
+- `POST /activities` to create an activity with validated input
+- Automated integration tests for reading and creating activities
 
-The three initial activities are stored in H2 and exposed through
-GET /activities and GET /activities/{id}. The frontend is served by
-Spring Boot and fetches the activity list from the same origin.
-Search and category filtering remain in the browser.
+The frontend is served by Spring Boot and fetches the activity list from
+the same origin. Search and category filtering remain in the browser.
+A valid activity creation request returns `201 Created` with the created
+activity and a `Location` header. Invalid input returns `400 Bad Request`.
 
-Authentication, guide management, booking, and activity write
-operations are not implemented yet.
+Authentication, guide management, bookings, and activity editing and
+deletion are not implemented yet. Activity creation currently has no
+authentication and is intended for local development.
 
 ## Next Increment
 
-Review and commit the activity API increment, then continue with
-subsequent MVP features.
+The first activity API increment covered read endpoints and frontend
+integration. Activity creation was added in a subsequent increment.
+The next feature will be selected from the remaining MVP work.
 
-See [Activity API Increment](docs/activity-api-scope.md)
-for this increment's scope and acceptance criteria.
+See [Activity API Increment](docs/activity-api-scope.md) for the scope
+and acceptance criteria of the original read-only increment.
 
 ## Documentation
 
