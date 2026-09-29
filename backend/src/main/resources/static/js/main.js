@@ -5,6 +5,7 @@ const activitiesGrid = document.querySelector("#activities-grid");
 const filterButtons = document.querySelectorAll(".filter-button");
 const searchInput = document.querySelector("#activity-search-input");
 const noActivitiesMessage = document.querySelector("#no-activities-message");
+const activitiesStatus = document.querySelector("#activities-status");
 
 
 let selectedCategory = "All";
@@ -18,8 +19,6 @@ function renderActivities(activityList) {
         "single-result",
         activityList.length === 1
     );
-
-    noActivitiesMessage.hidden = activityList.length !== 0;
 
     activityList.forEach((activity) => {
         const activityCard = document.createElement("article");
@@ -74,6 +73,8 @@ function applyFilters() {
     });
 
     renderActivities(filteredActivities);
+    noActivitiesMessage.hidden =
+        activities.length === 0 || filteredActivities.length > 0;
 }
 
 
@@ -102,7 +103,15 @@ searchInput.addEventListener("input", () => {
     applyFilters();
 });
 
+function showStatus(message) {
+    activitiesStatus.textContent = message;
+    activitiesStatus.hidden = message === "";
+}
+
 async function loadActivities() {
+    showStatus("Loading activities...");
+    noActivitiesMessage.hidden = true;
+
     try {
         const response = await fetch("/activities");
 
@@ -111,9 +120,19 @@ async function loadActivities() {
         }
 
         activities = await response.json();
+
+        if (activities.length === 0) {
+            showStatus("No activities are available yet.");
+        } else {
+            showStatus("");
+        }
+
         applyFilters();
     } catch (error) {
         console.error("Could not load activities:", error);
+        showStatus("Could not load activities. Please try again later.");
+        noActivitiesMessage.hidden = true;
+        activitiesGrid.innerHTML = "";
     }
 }
 
