@@ -4,6 +4,7 @@ import com.afsaneh.cimebook.dto.ActivityResponse;
 import com.afsaneh.cimebook.model.Activity;
 import com.afsaneh.cimebook.repository.ActivityRepository;
 import org.springframework.stereotype.Service;
+import com.afsaneh.cimebook.dto.ActivityCreateRequest;
 
 import java.util.List;
 import java.util.Optional;
@@ -58,5 +59,22 @@ public class ActivityServiceImpl implements ActivityService {
             case INTERMEDIATE -> "Intermediate";
             case ADVANCED -> "Advanced";
         };
+    }
+
+    @Override
+    public ActivityResponse create(ActivityCreateRequest request) {
+        Activity activity = new Activity(
+                request.title(),
+                request.description(),
+                request.category(),
+                request.difficulty(),
+                request.duration(),
+                request.price(),
+                request.image()
+        );
+
+        Activity savedActivity = activityRepository.save(activity);
+
+        return toResponse(savedActivity);
     }
 }
