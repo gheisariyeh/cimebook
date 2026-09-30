@@ -3,8 +3,13 @@
 ## Current Progress
 
 The responsive homepage, dynamic activity cards, category filters,
-and text search are implemented. Activity data now comes from a
-Spring Boot read-only API backed by file-based H2.
+and text search are implemented. Activity data comes from a Spring Boot
+API backed by file-based H2. The API supports listing, retrieving,
+creating, updating, and deleting activities. The homepage uses the read
+endpoint; write operations have no browser interface or authentication yet.
+
+Automated integration tests cover reading, creation, and updating.
+Deletion has been checked manually with an API client.
 
 Separate activity detail pages, guide profile pages, and booking
 forms are not implemented yet.
@@ -19,7 +24,8 @@ The first backend integration for activity browsing covers:
 4. Implement and check activity read endpoints. (Manually checked)
 5. Connect the existing JavaScript frontend to the API. (Manually checked)
 
-Documentation review and merge remain to close the documentation issue.
+This first increment was completed. Creation, updating, and deletion
+were implemented in separate, later increments.
 
 See [Activity API Increment](activity-api-scope.md)
 for the detailed scope.

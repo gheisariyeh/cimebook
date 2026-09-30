@@ -38,22 +38,35 @@ Implemented features:
 - `GET /activities` to list activities
 - `GET /activities/{id}` to retrieve one activity
 - `POST /activities` to create an activity with validated input
-- Automated integration tests for reading and creating activities
+- `PUT /activities/{id}` to replace an activity with validated input
+- `DELETE /activities/{id}` to remove an activity
+- Automated integration tests for reading, creating, and updating activities
 
 The frontend is served by Spring Boot and fetches the activity list from
 the same origin. Search and category filtering remain in the browser.
 A valid activity creation request returns `201 Created` with the created
-activity and a `Location` header. Invalid input returns `400 Bad Request`.
+activity and a `Location` header. Invalid create or update input returns
+`400 Bad Request`. The write endpoints are currently used through API clients;
+the homepage still only reads activities.
 
-Authentication, guide management, bookings, and activity editing and
-deletion are not implemented yet. Activity creation currently has no
-authentication and is intended for local development.
+| Method | Path | Success | Missing activity |
+| --- | --- | --- | --- |
+| `GET` | `/activities` | `200 OK` with an array (possibly empty) | — |
+| `GET` | `/activities/{id}` | `200 OK` with an activity | `404 Not Found` |
+| `POST` | `/activities` | `201 Created` with an activity and `Location` header | — |
+| `PUT` | `/activities/{id}` | `200 OK` with the updated activity | `404 Not Found` |
+| `DELETE` | `/activities/{id}` | `204 No Content` | `404 Not Found` |
+
+Authentication, guide management, and bookings are not implemented yet.
+Activity write endpoints currently have no authentication and are intended
+for local development.
 
 ## Next Increment
 
 The first activity API increment covered read endpoints and frontend
-integration. Activity creation was added in a subsequent increment.
-The next feature will be selected from the remaining MVP work.
+integration. Creation, updating, and deletion were added in later increments.
+Next, document the API workflow and plan a controlled interface for managing
+activities before making write operations available to users.
 
 See [Activity API Increment](docs/activity-api-scope.md) for the scope
 and acceptance criteria of the original read-only increment.

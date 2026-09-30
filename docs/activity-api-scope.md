@@ -58,8 +58,8 @@ A request for a nonexistent activity returns 404 Not Found.
 ## Acceptance Criteria
 
 The endpoint responses and initial data were checked manually during
-development. Automated coverage and a documented test report remain
-separate verification work.
+development. Automated integration tests for the read endpoints were
+added later. A separate documented test report is not part of this increment.
 
 ### Backend
 
@@ -74,8 +74,8 @@ separate verification work.
 - Activity cards use data received from the API.
 - Text search remains case-insensitive.
 - Search and category filtering work together.
-- No matching results have an appropriate message. Distinct loading,
-  request failure, and empty-data messages are still planned.
+- No matching results, loading, request failure, and empty data have
+  distinct messages.
 - Images display correctly.
 - The layout remains usable on mobile and desktop.
 
@@ -104,4 +104,7 @@ It does not deliver the complete booking platform.
 2. The Spring Boot application, activity model, and persistence were implemented.
 3. The read endpoints were implemented and checked manually.
 4. The existing frontend was connected to the API and checked in the browser.
-5. Update documentation to reflect implementation and review the changes.
+5. Documentation was updated and reviewed for the read-only increment.
+
+Creation, updating, and deletion were implemented in later increments;
+they remain outside the scope of this original increment.

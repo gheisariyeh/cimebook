@@ -42,11 +42,13 @@ The first complete version of CimeBook should include only the essential feature
 
 The full MVP described above remains the product target.
 
-The first activity increment implements activity persistence,
+The first activity increment implemented activity persistence,
 read-only API endpoints, and integration with the existing frontend.
+Later increments added creation, updating, and deletion through the API.
+The homepage still displays and filters activities without a management UI.
 
 Authentication, guide management, and bookings will be implemented
 in later increments.
 
 See [Activity API Increment](activity-api-scope.md)
-for the current scope.
+for the scope of the original read-only increment.
